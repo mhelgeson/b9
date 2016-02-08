@@ -9,15 +9,15 @@ direct messages or direct mentions in public channels or private groups.
 Declare a command listener with specified syntax (defines arguments) and
 description (shown in help).
 
-- syntax {string}
-A litteral string that defines the command keyword and any optional (`[...]`) or
-required (`<...>`) argument names.
+- `syntax` {string}
+A literal string that defines the command keyword and any `[optional]` or
+`<required>` argument names.
 
-- desc {string}
+- `desc` {string}
 A simple description of the command, which can be displayed with from `help`
 command.
 
-- callback {function} ( msg, reply )
+- `callback( msg, reply )` {function}
 A callback function which is invoked when a direct message or mention matches
 the declared command syntax.
 
@@ -30,7 +30,7 @@ arguments that are declared in the command syntax are given named properties on
 the `argv` array. In the example that follows, `msg.argv.a` is equal to
 `msg.argv[1]`.
 
-## Examples
+## Example
 
 ```js
 b9.command(
