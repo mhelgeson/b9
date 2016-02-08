@@ -1,18 +1,34 @@
 # B9 Command Module
 
-Declare simple keyword based callbacks. B9 only detects commands from direct
-messages or direct mentions in public channels or private groups.
+Declare simple keyword based callbacks. This module only detects commands from
+direct messages or direct mentions in public channels or private groups.
 
 ## Methods
 
-- `command( syntax, desc, callback )`
+`command( syntax, desc, callback )`
 Declare a command listener with specified syntax (defines arguments) and
 description (shown in help).
 
-## Commands
+- syntax {string}
+A litteral string that defines the command keyword and any optional (`[...]`) or
+required (`<...>`) argument names.
 
-- `help [cmd]`
-List available commands, syntax and description.
+- desc {string}
+A simple description of the command, which can be displayed with from `help`
+command.
+
+- callback {function} ( msg, reply )
+A callback function which is invoked when a direct message or mention matches
+the declared command syntax.
+
+## Arguments
+
+The arguments passed to a command are stored on the `msg` object in the `argv`
+property. This is an array containing an item for each word of the parsed
+command. The first entry `msg.argv[0]` is the name of the command itself. Named
+arguments that are declared in the command syntax are given named properties on
+the `argv` array. In the example that follows, `msg.argv.a` is equal to
+`msg.argv[1]`.
 
 ## Examples
 
@@ -28,3 +44,8 @@ b9.command(
   }
 );
 ```
+
+## Default Command
+
+- `help [cmd]`
+List available commands, syntax and description.
