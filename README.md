@@ -20,8 +20,8 @@ Require the `b9` module and invoke it with the api token.
 require("b9")("SLACK_API_TOKEN");
 ```
 
-## Core Modules
-- [core](./src)
+## Modules
+- [main](./src)
 - [command](./src/command)
 - [connect](./src/connect)
 - [events](./src/events)

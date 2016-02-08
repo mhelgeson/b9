@@ -5,7 +5,8 @@ direct messages or direct mentions in public channels or private groups.
 
 ## Methods
 
-`command( syntax, desc, callback )`
+#### `b9.command( syntax, desc, callback )`
+
 Declare a command listener with specified syntax (defines arguments) and
 description (shown in help).
 
@@ -45,7 +46,7 @@ b9.command(
 );
 ```
 
-## Default Command
+## Commands
 
-- `help [cmd]`
+#### `help [cmd]`
 List available commands, syntax and description.
