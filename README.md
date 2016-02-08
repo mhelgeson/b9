@@ -21,7 +21,7 @@ require("b9")("SLACK_API_TOKEN");
 ```
 
 ## Core Modules
-- [core](../src)
+- [core](./src)
 - [command](./src/command)
 - [connect](./src/connect)
 - [events](./src/events)
