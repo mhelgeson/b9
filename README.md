@@ -21,33 +21,10 @@ require("b9")("SLACK_API_TOKEN");
 ```
 
 ## Core Modules
+- [core](../src)
+- [command](./src/command)
+- [connect](./src/connect)
+- [events](./src/events)
+- [install](./src/install)
+- [post](./src/post)
 
-- [command](./src/command/README.md)
-- [connect](./src/connect/README.md)
-- [events](./src/events/README.md)
-- [install](./src/install/README.md)
-- [post](./src/post/README.md)
-
-## Advanced Usage
-
-```js
-// load dependencies
-var B9 = require('b9');
-
-// instantiate and configure
-var b9 = new B9({
-  token: "SLACK_API_TOKEN",
-  // other options...
-});
-
-// include additional modules
-b9.install('./path/to/plugin');
-
-// include additional listeners
-b9.on('rtm.send',function(){
-  // do something
-});
-
-// connect to remote
-b9.start();
-```
