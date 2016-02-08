@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "b9",
+  "description": "An event-based, modular slack bot framework",
+  "version": "0.0.0",
+  "author": "Mike Helgeson <mike.helgeson+b9@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "repository": "https://github.com/mhelgeson/b9",
+  "keywords": [
+    "slack",
+    "bot",
+    "b9"
+  ],
+  "dependencies": {
+    "ws": "^0.8.0"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.10",
+    "mocha": "^2.2.5",
+    "mocha-spec-cov-alt": "^0.3.0"
+  },
+  "main": "src/index.js",
+  "config": {
+    "blanket": {
+      "pattern": "index.js",
+      "spec-cov": {
+        "threshold": 80,
+        "localThreshold": 50
+      },
+      "data-cover-never": "node_modules",
+      "data-cover-reporter-options": {
+        "relativepath": true
+      }
+    }
+  },
+  "scripts": {
+    "test": "mocha src/**/test.js  --require blanket --reporter mocha-spec-cov-alt",
+    "coverage": "mocha src/**/test.js --require blanket --reporter html-cov > coverage.html"
+  }
+}

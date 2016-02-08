@@ -1,0 +1,7 @@
+{
+  "name": "test-package.json",
+  "private": true,
+  "dependencies": {
+    "./test-b9-plugin": "0.0.0"
+  }
+}
