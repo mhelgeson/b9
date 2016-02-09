@@ -25,7 +25,7 @@ describe('src/install',function(){
     // doesn't throw error
     var bot = new B9({
       // build an absolute path for the package.json module
-      package: path.join( __dirname, './test-package.json' )
+      package: path.join( __dirname, './test/package.json' )
     });
     // this property is set in the module that should be installed
     assert.equal( !!bot.test_plugin, true );
