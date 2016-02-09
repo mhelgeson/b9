@@ -1,8 +1,7 @@
 {
-  "private": true,
   "name": "b9",
   "description": "An event-based, modular slack bot framework",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Mike Helgeson <mike.helgeson+b9@gmail.com>",
   "contributors": [],
   "license": "MIT",
