@@ -1,5 +1,9 @@
-# B9 Class M3 General Utility Non-Theorizing Environmental Control Robot
-Also an event-based, modular slack bot framework for node/npm.
+# B9
+An event-based, modular slack bot framework.
+
+[![Build Status](https://travis-ci.org/mhelgeson/b9.svg?branch=master)](https://travis-ci.org/mhelgeson/b9)
+
+---
 
 ## Features
 - uses slack's real time messaging api
@@ -28,3 +32,6 @@ require("b9")("SLACK_API_TOKEN");
 - [install](./src/install)
 - [post](./src/post)
 
+---
+
+`Class M3 General Utility Non-Theorizing Environmental Control Robot`
