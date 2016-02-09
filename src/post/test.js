@@ -56,8 +56,6 @@ describe('src/post',function(){
       B9.prototype._package = false;
       // quick start without token
       var bot = B9();
-      // send a request
-      bot.post('foo');
     }, function( err ){
       assert.equal( err instanceof Error, true );
       assert.equal( (/token/i).test( err ), true );
