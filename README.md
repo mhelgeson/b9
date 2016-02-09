@@ -1,9 +1,8 @@
 # B9
-An event-based, modular slack bot framework.
-
 [![Build Status](https://travis-ci.org/mhelgeson/b9.svg?branch=master)](https://travis-ci.org/mhelgeson/b9)
 [![Coverage Status](https://coveralls.io/repos/github/mhelgeson/b9/badge.svg?branch=master)](https://coveralls.io/github/mhelgeson/b9?branch=master)
----
+- - -
+An event-based, modular slack bot framework.
 
 ## Features
 - uses slack's real time messaging api

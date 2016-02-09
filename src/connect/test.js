@@ -58,7 +58,7 @@ describe('src/connect',function(){
 
     bot.start(function( err, msg ){
       assert.equal( err instanceof Error, true );
-      assert.equal( err.message, 'getaddrinfo ENOTFOUND' );
+      assert.equal( err.message.indexOf('getaddrinfo ENOTFOUND'), 0 );
       done();
     });
   });
