@@ -16,6 +16,7 @@
     "ws": "^0.8.0"
   },
   "devDependencies": {
+    "coveralls": "^2.11.6",
     "istanbul": "^0.4.2",
     "mocha": "^2.2.5"
   },
