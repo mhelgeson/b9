@@ -16,26 +16,11 @@
     "ws": "^0.8.0"
   },
   "devDependencies": {
-    "blanket": "^1.1.10",
-    "mocha": "^2.2.5",
-    "mocha-spec-cov-alt": "^1.1.1"
+    "istanbul": "^0.4.2",
+    "mocha": "^2.2.5"
   },
   "main": "src/index.js",
-  "config": {
-    "blanket": {
-      "pattern": "index.js",
-      "spec-cov": {
-        "threshold": 80,
-        "localThreshold": 50
-      },
-      "data-cover-never": "node_modules",
-      "data-cover-reporter-options": {
-        "relativepath": true
-      }
-    }
-  },
   "scripts": {
-    "test": "mocha src/**/test.js  --require blanket --reporter mocha-spec-cov-alt",
-    "coverage": "mocha src/**/test.js --require blanket --reporter html-cov > coverage.html"
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec src/**/test.js"
   }
 }
