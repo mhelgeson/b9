@@ -4,10 +4,10 @@ from `dependencies` in the main `package.json`.
 
 ## Options
 
-- `pattern` {RegExp} `/b9-/`
+- **`pattern`** *`{RegExp}`* `/b9-/` <br />
 Package naming pattern which should be auto-loaded.
 
-- `package` {String} `"./package.json"`
+- **`package`** *`{String}`* `"./package.json"` <br />
 Path to the `package.json` from which to install plugins from `dependencies`.
 
 ## Methods
@@ -15,7 +15,7 @@ Path to the `package.json` from which to install plugins from `dependencies`.
 #### `b9.install( module )`
 Install a new plugin module on the `b9` instance.
 
-- `module` {String|Function}
+- **`module`** *`{String|Function}`* <br />
 A module name or path or the module itself.
 
 ## Plugins

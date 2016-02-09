@@ -10,19 +10,19 @@ direct messages or direct mentions in public channels or private groups.
 Declare a command listener with specified syntax (defines arguments) and
 description (shown in help).
 
-- `syntax` {string}
+- **`syntax`** *`{String}`* <br />
 A literal string that defines the command keyword and any `[optional]` or
 `<required>` argument names.
 
-- `desc` {string}
+- **`desc`** *`{String}`* <br />
 A simple description of the command, which can be displayed with from `help`
 command.
 
-- `callback( msg, reply )` {function}
+- **`callback( msg, reply )`** *`{Function}`* <br />
 A callback function which is invoked when a direct message or mention matches
 the declared command syntax.
 
-## Arguments
+## Argument Vector
 
 The arguments passed to a command are stored on the `msg` object in the `argv`
 property. This is an array containing an item for each word of the parsed

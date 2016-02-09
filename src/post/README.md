@@ -4,16 +4,16 @@ the `b9` constructor. https://api.slack.com/methods
 
 ## Options
 
-- `token` {String} `null`
+- **`token`** *`{String}`* `null` <br />
 A slack bot api auth token. Error is thrown if this is null.
 
-- `host` {String} `"api.slack.com"`
+- **`host`** *`{String}`* `"api.slack.com"` <br />
 The host to which requests are sent. Useful for testing.
 
-- `path` {String} `"api"`
+- **`path`** *`{String}`* `"api"` <br />
 The path to which requests are sent. Useful for testing.
 
-- `port` {Number} `null`
+- **`port`** *`{Number}`* `null` <br />
 The port number to which requests are sent. Useful for testing.
 
 ## Methods
@@ -21,13 +21,13 @@ The port number to which requests are sent. Useful for testing.
 #### `b9.post( method, params, callback )`
 Make a slack web-api request.
 
-- `method` {String}
+- **`method`** *`{String}`* <br />
 The name of the web-api method to call.
 
-- `params` {Object}
+- **`params`** *`{Object}`* <br />
 Parameters to pass to the web-api method.
 
-- `callback` {Function}
+- **`callback`** *`{Function}`* <br />
 Error-first style callback to handle the api response.
 
 ## Events

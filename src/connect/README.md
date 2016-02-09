@@ -3,7 +3,7 @@ Connect to the [slack real-time messaging api](https://api.slack.com/methods/rtm
 
 ## Options
 
-- `interval` {Number} `5000`
+- **`interval`** *`{Number}`* `5000` <br />
 The idle duration in milliseconds between socket pings.
 
 ## Methods
@@ -12,7 +12,7 @@ The idle duration in milliseconds between socket pings.
 
 Call slack `rtm.start` and then open a websocket and listen for json.
 
-- `callback ( err, msg )` {function}
+- **`callback ( err, msg )`** *`{Function}`*<br />
 Error-first style callback which is fired after the rtm socket is opened.
 
 #### `b9.stop()`
@@ -22,7 +22,7 @@ Close any open websocket, stop listening.
 
 Send json to the slack rtm socket.
 
-- `msg` {object}
+- **`msg`** *`{Object}`*<br />
 A message object to send as json to the rtm socket.
 https://api.slack.com/rtm#sending_messages
 
@@ -39,7 +39,7 @@ Emitted when json is sent to the rtm socket. Useful for logging.
 #### `"rtm.read"`
 Emitted when any json is received from the rtm socket. Useful for logging.
 
-#### `"message"` etc.
+#### `"message"`, et al.
 Any event type recieved from the rtm socket is emitted as an event.
 https://api.slack.com/rtm#events
 
