@@ -6,6 +6,7 @@ describe('src/install',function(){
 
   it('has a public api',function(){
     var bot = new B9();
+    bot.install(); // no-op
     assert.equal( typeof bot.install, 'function' );
   });
 
@@ -28,6 +29,18 @@ describe('src/install',function(){
       package: path.join( __dirname, './test/package.json' )
     });
     // this property is set in the module that should be installed
+    assert.equal( !!bot.test_plugin, true );
+  });
+
+  it('can install local paths',function(){
+    var bot = new B9();
+    bot.install('./test/b9-plugin');
+    assert.equal( !!bot.test_plugin, true );
+  });
+
+  it('can install functions',function(){
+    var bot = new B9();
+    bot.install( require('./test/b9-plugin') );
     assert.equal( !!bot.test_plugin, true );
   });
 

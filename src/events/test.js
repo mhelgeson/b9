@@ -6,9 +6,12 @@ describe('src/events',function(){
   var bot = new B9({ package:false });
 
   it('has a public api',function(){
-    assert.equal( typeof bot.on, 'function' );
-    assert.equal( typeof bot.off, 'function' );
     assert.equal( typeof bot.emit, 'function' );
+    bot.emit('foo'); // no-op
+    assert.equal( typeof bot.off, 'function' );
+    bot.off('foo'); // no-op
+    assert.equal( typeof bot.on, 'function' );
+    bot.on('foo'); // no-op
   });
 
   it('adds listeners',function(){

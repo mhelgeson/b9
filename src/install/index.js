@@ -19,7 +19,12 @@ module.exports = function( b9 ){
 
   b9.install = function( pkg ){
     if ( typeof pkg === 'string' ){
-      pkg = require( pkg );
+      try {
+        pkg = mainreq( pkg );
+      }
+      catch ( ex ){
+        pkg = require( pkg );
+      }
     }
     if ( typeof pkg === 'function' ){
       pkg( b9 );
