@@ -104,6 +104,14 @@ describe('src/command',function(){
 
   });
 
+  it('does not crash on text-less messages',function(){
+
+    assert.doesNotThrow(function(){
+      bot.emit('message', { channel:'D' });
+    });
+
+  });
+
   // simulate receiving a command
   function simulate ( str, reply ){
     bot.emit('message',{

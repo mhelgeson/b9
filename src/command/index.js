@@ -34,6 +34,9 @@ module.exports = function( b9 ){
    * @private listener
    */
   b9.on('message', function( msg, reply ){
+    if ( !msg.text ){
+      return;
+    }
     // {array} argument vector
     var argv = msg.text.split(/ +/), cmd, i = 1, direct;
     // indicates a specific [start of message] mention
