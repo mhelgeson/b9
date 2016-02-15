@@ -103,8 +103,8 @@ module.exports = function( b9 ){
     msg.id = msg.id || guid++;
     pending[ msg.id ] = msg;
     if ( ws != null ) {
-      ws.send( JSON.stringify( msg ) );
       b9.emit('rtm.send', msg );
+      ws.send( JSON.stringify( msg ) );
     }
   };
 
