@@ -50,3 +50,9 @@ b9.command(
 
 #### `help [cmd]`
 List available commands, syntax and description.
+
+#### `ping`
+Test the availability of the bot.
+
+#### `time`
+Get the current time of the bot.

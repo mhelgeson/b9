@@ -87,9 +87,24 @@ describe('src/command',function(){
     simulate('help', parse_help );
     // inspect the parsed result
     assert.equal( (/^help/).test(lines[1]), true );
-    assert.equal( (/^foo/).test(lines[2]), true );
-    assert.equal( (/^bar/).test(lines[3]), true );
-    assert.equal( (/^baz/).test(lines[4]), true );
+    assert.equal( (/^ping/).test(lines[2]), true );
+    assert.equal( (/^time/).test(lines[3]), true );
+    assert.equal( (/^foo/).test(lines[4]), true );
+    assert.equal( (/^bar/).test(lines[5]), true );
+    assert.equal( (/^baz/).test(lines[6]), true );
+  });
+
+  it('has `ping` and `time` commands',function(){
+    // local ref
+    var lines = [];
+    // simulate command
+    simulate('ping',function( txt ){
+      assert.equal( txt, 'PONG' );
+    });
+    // simulate command
+    simulate('time',function( txt ){
+      assert.equal( txt, new Date() );
+    });
   });
 
   it('answers to direct mentions',function(){

@@ -94,4 +94,26 @@ module.exports = function( b9 ){
     }
   );
 
+  /**
+   * add basic `ping` command listener
+   * @public command
+   */
+  b9.command('ping',
+    'Test reachability of the bot.',
+    function( msg, reply ){
+      reply('PONG');
+    }
+  );
+
+  /**
+   * add basic `time` command listener
+   * @public command
+   */
+  b9.command('time',
+    'Get the current time of the bot.',
+    function( msg, reply ){
+      reply( new Date().toString() );
+    }
+  );
+
 };
