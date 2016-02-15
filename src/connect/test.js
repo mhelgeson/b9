@@ -163,7 +163,7 @@ describe('src/connect',function(){
         var elapsed = msg.time - time,
         diff = elapsed - bot._interval;
         // assert a very small margin of error
-        assert.equal( diff < 25, true );
+        assert.equal( diff < 50, true );
         bot.stop();
         done();
       }
