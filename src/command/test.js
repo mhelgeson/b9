@@ -75,6 +75,30 @@ describe('src/command',function(){
     assert.equal( arg, 'xyz' );
   });
 
+  it('registers a command and tokenize multi-word string arguments',function(){
+    var argv;
+
+    // register another command
+    bot.command('foo [arg1] [arg2] [arg3] [arg4] [arg5] [arg6] [arg7]',
+        'the foo command',
+        function( msg ){
+          argv = msg.argv;
+        }
+    );
+
+    // simulate command
+    simulate('foo \"hello world\" arg1 arg2 \'multi arg that has nested strings \"haha hehe\"\' arg3     anotherArg     _arg4_');
+
+    // optional arg is defined
+    assert.equal(argv.arg1, 'hello world' );
+    assert.equal(argv.arg2, 'arg1' );
+    assert.equal(argv.arg3, 'arg2' );
+    assert.equal(argv.arg4, 'multi arg that has nested strings "haha hehe"' );
+    assert.equal(argv.arg5, 'arg3' );
+    assert.equal(argv.arg6, 'anotherArg' );
+    assert.equal(argv.arg7, '_arg4_' );
+  });
+
   it('has an informative `help` command',function(){
     // local ref
     var lines = [];
