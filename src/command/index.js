@@ -15,7 +15,7 @@ module.exports = function( b9 ){
    */
   b9.command = function( syntax, desc, callback ){
     var args = syntax.split(/ +/),
-    name = args.shift();
+    name = args.shift().toLowerCase();
     commands[ name ] = {
       name: name,
       syntax: syntax,
@@ -50,7 +50,7 @@ module.exports = function( b9 ){
     if ( msg.channel && msg.channel[0] === 'D' ){
       direct = true;
     }
-    if ( direct && commands[ cmd = argv[0] ] != null ){
+    if ( direct && commands[ cmd = argv[0].toLowerCase() ] != null ){
       var ok = commands[ cmd ].args.every(function( arg ){
         var next = argv[ i++ ];
         if ( !next && arg.required ){

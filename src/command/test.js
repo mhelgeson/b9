@@ -131,6 +131,16 @@ describe('src/command',function(){
     });
   });
 
+  it('is case-insensitive',function(){
+    simulate('Ping',function( txt ){
+      assert.equal( txt, 'PONG' );
+    });
+    // simulate command
+    simulate('tiME',function( txt ){
+      assert.equal( txt, new Date() );
+    });
+  });
+
   it('answers to direct mentions',function(){
 
     simulate('help help',function( txt ){
