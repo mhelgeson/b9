@@ -110,12 +110,12 @@ describe('src/command',function(){
     // simulate command
     simulate('help', parse_help );
     // inspect the parsed result
+    assert.equal( (/^bar/).test(lines[1]), true );
+    assert.equal( (/^baz/).test(lines[2]), true );
+    assert.equal( (/^foo/).test(lines[3]), true );
     assert.equal( (/^help/).test(lines[4]), true );
     assert.equal( (/^ping/).test(lines[5]), true );
     assert.equal( (/^time/).test(lines[6]), true );
-    assert.equal( (/^foo/).test(lines[3]), true );
-    assert.equal( (/^bar/).test(lines[1]), true );
-    assert.equal( (/^baz/).test(lines[2]), true );
   });
 
   it('has `ping` and `time` commands',function(){
