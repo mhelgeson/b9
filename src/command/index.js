@@ -86,11 +86,14 @@ module.exports = function( b9 ){
         }
       }
       else {
+        var keys = Object.keys( commands );
+        keys.sort();
         lines.push('Available commands...');
-        Object.keys( commands ).forEach(function( name ){
+        for(var x = 0; x < keys.length; x++) {
+          var name = keys[x];
           var cmd = commands[ name ];
           lines.push('*'+ name +'* - '+( cmd.desc || "" ) );
-        });
+        }
       }
       reply( lines.join('\n\n') );
     }
