@@ -108,6 +108,7 @@ describe('src/command',function(){
       lines = txt.replace(/\*/g,'').split(/\n+/);
     };
     // simulate command
+    simulate('');
     simulate('help', parse_help );
     // inspect the parsed result
     assert.equal( (/^bar/).test(lines[1]), true );

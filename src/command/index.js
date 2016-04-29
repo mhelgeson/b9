@@ -42,9 +42,13 @@ module.exports = function( b9 ){
     // {array} argument vector
     var argv = tokenize(msg.text), cmd, i = 1, direct;
     // indicates a specific [start of message] mention
-    if ( msg.text.indexOf('<@'+ b9.self.id +'>') === 0 ){
+    if ( argv.length && msg.text.indexOf('<@'+ b9.self.id +'>') === 0 ){
       argv = argv.slice(1); // shift arguments
       direct = true;
+    }
+    console.log( argv );
+    if ( !argv.length ){
+      return;
     }
     // indicates a direct instant message
     if ( msg.channel && msg.channel[0] === 'D' ){
