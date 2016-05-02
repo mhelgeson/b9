@@ -46,7 +46,6 @@ module.exports = function( b9 ){
       argv = argv.slice(1); // shift arguments
       direct = true;
     }
-    console.log( argv );
     if ( !argv.length ){
       return;
     }
